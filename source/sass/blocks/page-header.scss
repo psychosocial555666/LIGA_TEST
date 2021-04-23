@@ -4,7 +4,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   z-index: 10;
   animation: appear 2s linear;
 }
@@ -33,7 +33,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     overflow: hidden;
-    transition: height .5s ease-in-out;
+    transition: height 0.5s ease-in-out;
   }
 
   .page-header__logo {
@@ -53,7 +53,7 @@
     top: 26px;
     right: 26px;
     overflow: hidden;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     span {
       position: absolute;
@@ -63,7 +63,7 @@
       top: 50%;
       transform: translate(0, -50%);
       background-color: $color-neon-blue;
-      transition: all .5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
 
     &::before {
@@ -74,7 +74,7 @@
       width: 80%;
       height: 2px;
       background-color: $color-neon-blue;
-      transition: all .5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
 
     &::after {
@@ -85,7 +85,7 @@
       width: 80%;
       height: 2px;
       background-color: $color-neon-blue;
-      transition: all .5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
 
     &:hover,

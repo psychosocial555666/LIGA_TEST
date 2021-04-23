@@ -446,7 +446,6 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
-  height: calc(100 * var(--vh, 1vh));
   overflow: hidden; }
   .wrapper main {
     -webkit-box-flex: 1;
@@ -494,40 +493,52 @@ button,
     opacity: 1; } }
 
 @-webkit-keyframes jump {
-  10%, 50% {
+  10%,
+  50% {
     -webkit-transform: translate(-50%, -10%);
             transform: translate(-50%, -10%); }
   30% {
     -webkit-transform: translate(-50%, -20%);
             transform: translate(-50%, -20%); }
-  20%, 40%, 60% {
+  20%,
+  40%,
+  60% {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0); } }
 
 @keyframes jump {
-  10%, 50% {
+  10%,
+  50% {
     -webkit-transform: translate(-50%, -10%);
             transform: translate(-50%, -10%); }
   30% {
     -webkit-transform: translate(-50%, -20%);
             transform: translate(-50%, -20%); }
-  20%, 40%, 60% {
+  20%,
+  40%,
+  60% {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0); } }
 
 @-webkit-keyframes hit {
-  10%, 30%, 50% {
+  10%,
+  30%,
+  50% {
     -webkit-transform: scale(1);
             transform: scale(1); }
-  20%, 40% {
+  20%,
+  40% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95); } }
 
 @keyframes hit {
-  10%, 30%, 50% {
+  10%,
+  30%,
+  50% {
     -webkit-transform: scale(1);
             transform: scale(1); }
-  20%, 40% {
+  20%,
+  40% {
     -webkit-transform: scale(0.95);
             transform: scale(0.95); } }
 
@@ -560,10 +571,12 @@ button,
     opacity: 0; } }
 
 @-webkit-keyframes arrrgh {
-  10%, 30% {
+  10%,
+  30% {
     -webkit-transform: rotateZ(-5deg);
             transform: rotateZ(-5deg); }
-  20%, 40% {
+  20%,
+  40% {
     -webkit-transform: rotateZ(5deg);
             transform: rotateZ(5deg); }
   50% {
@@ -571,10 +584,12 @@ button,
             transform: rotateZ(0); } }
 
 @keyframes arrrgh {
-  10%, 30% {
+  10%,
+  30% {
     -webkit-transform: rotateZ(-5deg);
             transform: rotateZ(-5deg); }
-  20%, 40% {
+  20%,
+  40% {
     -webkit-transform: rotateZ(5deg);
             transform: rotateZ(5deg); }
   50% {
@@ -587,7 +602,7 @@ button,
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   z-index: 10;
   -webkit-animation: appear 2s linear;
           animation: appear 2s linear; }
@@ -628,8 +643,8 @@ button,
         -ms-flex-pack: start;
             justify-content: flex-start;
     overflow: hidden;
-    -webkit-transition: height .5s ease-in-out;
-    transition: height .5s ease-in-out; }
+    -webkit-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out; }
   .page-header__logo {
     margin-bottom: 333px; }
   .page-header__toggle {
@@ -647,8 +662,8 @@ button,
     top: 26px;
     right: 26px;
     overflow: hidden;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out; }
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
     .page-header__toggle span {
       position: absolute;
       width: 80%;
@@ -658,8 +673,8 @@ button,
       -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%);
       background-color: #2c39f2;
-      -webkit-transition: all .5s ease-in-out;
-      transition: all .5s ease-in-out; }
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
     .page-header__toggle::before {
       content: "";
       position: absolute;
@@ -668,8 +683,8 @@ button,
       width: 80%;
       height: 2px;
       background-color: #2c39f2;
-      -webkit-transition: all .5s ease-in-out;
-      transition: all .5s ease-in-out; }
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
     .page-header__toggle::after {
       content: "";
       position: absolute;
@@ -678,8 +693,8 @@ button,
       width: 80%;
       height: 2px;
       background-color: #2c39f2;
-      -webkit-transition: all .5s ease-in-out;
-      transition: all .5s ease-in-out; }
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
     .page-header__toggle:hover, .page-header__toggle:focus {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
@@ -718,8 +733,8 @@ button,
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  -webkit-transition: color .5s ease-in-out;
-  transition: color .5s ease-in-out; }
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out; }
   .main-nav__link:hover, .main-nav__link:focus {
     color: #2c39f2; }
 
@@ -773,8 +788,8 @@ button,
     width: 800px;
     height: 100px; }
 
-#LIGA path,
-#FRONT path {
+.liga path,
+.front path {
   fill: black; }
 
 .welcome-screen__label {
@@ -854,27 +869,27 @@ button,
   .main-screen__description-container svg {
     margin-bottom: 35px; }
 
-#lightning-violet,
-#lightning-blue,
-#lightning-red {
+.lightning-violet,
+.lightning-blue,
+.lightning-red {
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box;
   -webkit-animation: hit 2s alternate infinite;
           animation: hit 2s alternate infinite; }
-  #lightning-violet path,
-  #lightning-blue path,
-  #lightning-red path {
+  .lightning-violet path,
+  .lightning-blue path,
+  .lightning-red path {
     -webkit-animation: color 2s alternate infinite;
             animation: color 2s alternate infinite; }
 
-#scream-argh {
+.scream-argh {
   -webkit-animation: arrrgh 2s alternate infinite;
           animation: arrrgh 2s alternate infinite;
   -webkit-transform-origin: center;
           transform-origin: center;
   transform-box: fill-box; }
-  #scream-argh path {
+  .scream-argh path {
     -webkit-animation: blink 2s alternate infinite;
             animation: blink 2s alternate infinite; }
 
@@ -900,24 +915,24 @@ button,
     transition: left 1s ease-in-out; }
     .main-screen__description-container p {
       color: white; }
-  #lightning-violet,
-  #lightning-blue,
-  #lightning-red {
+  .lightning-violet,
+  .lightning-blue,
+  .lightning-red {
     -webkit-transform-origin: center;
             transform-origin: center;
     transform-box: fill-box;
     -webkit-animation: hit 2s alternate infinite;
             animation: hit 2s alternate infinite; }
-    #lightning-violet path,
-    #lightning-blue path,
-    #lightning-red path {
+    .lightning-violet path,
+    .lightning-blue path,
+    .lightning-red path {
       fill: white;
       -webkit-animation: none;
               animation: none; }
-  #flag path {
+  .flag path {
     fill: white;
     stroke: black; }
-  #scream-argh path {
+  .scream-argh path {
     fill: white; }
   .main-screen--toggle .main-screen__title-container {
     left: -100%; }

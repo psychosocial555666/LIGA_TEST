@@ -11,7 +11,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  transition: color .5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 
   &:hover,
   &:focus {
@@ -23,6 +23,7 @@
   .main-nav {
     margin: 0 auto;
   }
+
   .main-nav__list {
     display: flex;
     flex-direction: column;

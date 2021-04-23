@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   transition: top 1s ease-in-out;
-  background-image: url('../../img/A-background.svg');
+  background-image: url("../../img/A-background.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 644px 651px;
@@ -51,9 +51,9 @@
   }
 }
 
-#lightning-violet,
-#lightning-blue,
-#lightning-red {
+.lightning-violet,
+.lightning-blue,
+.lightning-red {
   transform-origin: center;
   transform-box: fill-box;
   animation: hit 2s alternate infinite;
@@ -63,7 +63,7 @@
   }
 }
 
-#scream-argh {
+.scream-argh {
   animation: arrrgh 2s alternate infinite;
   transform-origin: center;
   transform-box: fill-box;
@@ -101,9 +101,9 @@
     }
   }
 
-  #lightning-violet,
-  #lightning-blue,
-  #lightning-red {
+  .lightning-violet,
+  .lightning-blue,
+  .lightning-red {
     transform-origin: center;
     transform-box: fill-box;
     animation: hit 2s alternate infinite;
@@ -114,14 +114,14 @@
     }
   }
 
-  #flag {
+  .flag {
     path {
       fill: white;
       stroke: black;
     }
   }
 
-  #scream-argh {
+  .scream-argh {
     path {
       fill: white;
     }

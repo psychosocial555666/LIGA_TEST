@@ -2,13 +2,15 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 @keyframes jump {
-  10%, 50% {
+  10%,
+  50% {
     transform: translate(-50%, -10%);
   }
 
@@ -16,18 +18,23 @@
     transform: translate(-50%, -20%);
   }
 
-  20%, 40%, 60% {
+  20%,
+  40%,
+  60% {
     transform: translate(-50%, 0);
   }
 }
 
 
 @keyframes hit {
-  10%, 30%, 50% {
+  10%,
+  30%,
+  50% {
     transform: scale(1);
   }
 
-  20%, 40% {
+  20%,
+  40% {
     transform: scale(0.95);
   }
 }
@@ -57,11 +64,13 @@
 }
 
 @keyframes arrrgh {
-  10%, 30% {
+  10%,
+  30% {
     transform: rotateZ(-5deg);
   }
 
-  20%, 40% {
+  20%,
+  40% {
     transform: rotateZ(5deg);
   }
 
