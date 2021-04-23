@@ -1,0 +1,40 @@
+.main-nav__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-column-gap: 24px;
+}
+
+.main-nav__link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  transition: color .5s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $color-neon-blue;
+  }
+}
+
+@include viewport--md {
+  .main-nav {
+    margin: 0 auto;
+  }
+  .main-nav__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav__item {
+    margin-bottom: 30px;
+  }
+
+  .main-nav__link {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}

@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: calc(100 * var(--vh, 1vh));
+  overflow: hidden;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@include viewport--md {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}

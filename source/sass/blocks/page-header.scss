@@ -1,0 +1,128 @@
+.page-header {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10;
+  animation: appear 2s linear;
+}
+
+.page-header--show {
+  display: flex;
+}
+
+.page-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 25px 0;
+}
+
+.page-header__toggle {
+  display: none;
+}
+
+@include viewport--md {
+  .page-header__content {
+    height: 74px;
+    padding: 25px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: height .5s ease-in-out;
+  }
+
+  .page-header__logo {
+    margin-bottom: 333px;
+  }
+
+  .page-header__toggle {
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 36px;
+    height: 30px;
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+
+    span {
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      left: 3px;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-color: $color-neon-blue;
+      transition: all .5s ease-in-out;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 3px;
+      width: 80%;
+      height: 2px;
+      background-color: $color-neon-blue;
+      transition: all .5s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      left: 3px;
+      width: 80%;
+      height: 2px;
+      background-color: $color-neon-blue;
+      transition: all .5s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+
+  .page-header__nav {
+    display: none;
+  }
+
+  .page-header--opened {
+    .page-header__toggle {
+      span {
+        left: -50px;
+      }
+
+      &::before {
+        top: 14px;
+        left: 3px;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        bottom: 14px;
+        left: 3px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .page-header__content {
+      height: 100vh;
+    }
+
+    .page-header__nav {
+      display: flex;
+    }
+  }
+}

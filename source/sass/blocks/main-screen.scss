@@ -1,0 +1,139 @@
+.main-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  top: -100vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: top 1s ease-in-out;
+  background-image: url('../../img/A-background.svg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 644px 651px;
+
+  h1 {
+    font-size: 96px;
+    line-height: 96px;
+    color: $color-neon-blue;
+    font-weight: normal;
+  }
+}
+
+.main-screen--hide {
+  top: 0;
+}
+
+.main-screen__title-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.main-screen__description-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+  }
+
+  svg {
+    margin-bottom: 35px;
+  }
+}
+
+#lightning-violet,
+#lightning-blue,
+#lightning-red {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: hit 2s alternate infinite;
+
+  path {
+    animation: color 2s alternate infinite;
+  }
+}
+
+#scream-argh {
+  animation: arrrgh 2s alternate infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+
+  path {
+    animation: blink 2s alternate infinite;
+  }
+}
+
+@include viewport--md {
+  .main-screen {
+    overflow: hidden;
+    background-image: none;
+  }
+
+  .main-screen__title-container {
+    position: absolute;
+    margin-right: 0;
+    width: 100%;
+    left: 0;
+    padding: 0 24px;
+    transition: left 1s ease-in-out;
+  }
+
+  .main-screen__description-container {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    padding: 0 24px;
+    background-color: $color-neon-blue;
+    transition: left 1s ease-in-out;
+
+    p {
+      color: white;
+    }
+  }
+
+  #lightning-violet,
+  #lightning-blue,
+  #lightning-red {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: hit 2s alternate infinite;
+
+    path {
+      fill: white;
+      animation: none;
+    }
+  }
+
+  #flag {
+    path {
+      fill: white;
+      stroke: black;
+    }
+  }
+
+  #scream-argh {
+    path {
+      fill: white;
+    }
+  }
+
+  .main-screen--toggle {
+    .main-screen__title-container {
+      left: -100%;
+    }
+
+    .main-screen__description-container {
+      left: 0;
+    }
+  }
+}
